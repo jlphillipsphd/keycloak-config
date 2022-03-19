@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: keycloak-cert
+spec:
+  dnsNames:
+    - keycloak.prism-rol.org
+  commonName: keycloak.prism-rol.org
+  secretName: keycloak-tls
+  issuerRef:
+    name: letsencrypt-issuer
+    kind: ClusterIssuer
