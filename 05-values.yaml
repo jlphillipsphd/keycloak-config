@@ -102,7 +102,9 @@ command: []
 args: []
 
 # Additional environment variables for Keycloak
-extraEnv: ""
+extraEnv: |
+  - name: PROXY_ADDRESS_FORWARDING
+    value: "true"
   # - name: KEYCLOAK_LOGLEVEL
   #   value: DEBUG
   # - name: WILDFLY_LOGLEVEL
